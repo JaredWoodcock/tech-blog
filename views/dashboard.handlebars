@@ -1,0 +1,10 @@
+{{#each posts}}
+    <article class="post">
+        <h2>{{title}}</h2>
+        <p>{{content}}</p>
+        <p>Created on {{createdAt}}</p>
+        <a href="/dashboard/post/{{id}}">Edit</a>
+    </article>
+{{/each}}
+
+<!-- Include a form for adding new posts -->

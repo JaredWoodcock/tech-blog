@@ -16,7 +16,10 @@ router.get('/:postId', async (req, res) => {
         });
 
         const comments = commentData.map((comment) => comment.get({ plain: true }));
-        res.status(200).json(comments);
+        res.render('post', {
+            comments,
+            loggedIn: req.session.loggedIn,
+        });
     } catch (err) {
         res.status(500).json(err);
     }

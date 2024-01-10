@@ -1,0 +1,11 @@
+<article class="post">
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+    <p>Created by {{user.username}} on {{createdAt}}</p>
+
+    <!-- Render comments here -->
+
+    {{#if loggedIn}}
+        <!-- Include a form for adding comments -->
+    {{/if}}
+</article>
